@@ -19,8 +19,10 @@ function App() {
 
     window.addEventListener("beforeinstallprompt", (event) => {
       // Previne o comportamento padrão do browser de mostrar o prompt de instalação
+      console.log("teste")
       event.preventDefault();
       // Salva o evento para ser usado depois
+      console.log(event);
       setDeferredPrompt(event);
     });
   }, []);
@@ -40,7 +42,8 @@ function App() {
         setDeferredPrompt(null);
       });
     } else{
-      alert("App já instalado!")
+      alert("App já instalado!");
+      console.log(deferredPrompt);
     }
   };
 

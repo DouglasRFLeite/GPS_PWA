@@ -19,12 +19,12 @@ if ('serviceWorker' in navigator) {
     });
   });
 
-  window.addEventListener('beforeinstallprompt', (event) => {
-    // Previne o comportamento padrão do browser de mostrar o prompt de instalação
-    event.preventDefault();
-    // Salva o evento para ser usado depois
-    deferredPrompt = event;
-    // Ativa um elemento no DOM para indicar que o app pode ser instalado
-    installButton.style.display = 'block';
-  });
+  // window.addEventListener('beforeinstallprompt', (event) => {
+  //   // Previne o comportamento padrão do browser de mostrar o prompt de instalação
+  //   event.preventDefault();
+  //   // Salva o evento para ser usado depois
+  //   deferredPrompt = event;
+  //   // Ativa um elemento no DOM para indicar que o app pode ser instalado
+  //   installButton.style.display = 'block';
+  // });
 }
