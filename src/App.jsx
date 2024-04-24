@@ -39,6 +39,8 @@ function App() {
         // Limpa o prompt salvo
         setDeferredPrompt(null);
       });
+    } else{
+      alert("App já instalado!")
     }
   };
 
