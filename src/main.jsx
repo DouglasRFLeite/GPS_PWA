@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // index.js
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js').then(registration => {
+    navigator.serviceWorker.register('./service-worker.js').then(registration => {
       console.log('Service Worker registrado!', registration);
     }).catch(err => {
       console.log('Erro ao registrar Service Worker:', err);
