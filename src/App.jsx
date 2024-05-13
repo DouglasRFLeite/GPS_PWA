@@ -5,6 +5,7 @@ import CurrentLocationMap from "./components/CurrentLocationMap";
 function App() {
   const [position, setPosition] = useState({ lat: 0, lng: 0 });
   const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [canBeInstalled, setCanBeInstalled] = useState(false);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -19,11 +20,12 @@ function App() {
 
     window.addEventListener("beforeinstallprompt", (event) => {
       // Previne o comportamento padrão do browser de mostrar o prompt de instalação
-      console.log("teste")
+      console.log("teste");
       event.preventDefault();
       // Salva o evento para ser usado depois
       console.log(event);
       setDeferredPrompt(event);
+      setCanBeInstalled(true);
     });
   }, []);
 
@@ -41,7 +43,7 @@ function App() {
         // Limpa o prompt salvo
         setDeferredPrompt(null);
       });
-    } else{
+    } else {
       alert("App já instalado!");
       console.log(deferredPrompt);
     }
@@ -50,7 +52,8 @@ function App() {
   return (
     <>
       <CurrentLocationMap position={position} />
-      <button onClick={handleInstallClick}>Instalar</button>
+      {canBeInstalled && <button onClick={handleInstallClick}>Instalar</button>}
+      <h6>Versão: 1.0.1</h6>
     </>
   );
 }
