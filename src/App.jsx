@@ -53,7 +53,7 @@ function App() {
     <>
       <CurrentLocationMap position={position} />
       {canBeInstalled && <button onClick={handleInstallClick}>Instalar</button>}
-      <h6>Versão: 1.0.1</h6>
+      <h6>Versão: 1.0.0</h6>
     </>
   );
 }
