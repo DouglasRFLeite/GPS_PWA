@@ -13,10 +13,13 @@
     "@googlemaps/react-wrapper": "^1.1.35",
     "@react-leaflet/core": "^2.1.0",
     "@vis.gl/react-google-maps": "^0.9.0",
+    "firebase": "^10.12.1",
+    "firebaseui": "^6.1.0",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.23.1",
     "web-push": "^3.6.7"
   },
   "devDependencies": {
